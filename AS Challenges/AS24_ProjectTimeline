@@ -1,0 +1,48 @@
+char = input("Input a character: ")
+
+while len(char) != 1:
+  char = input("Input a character: ")
+
+print("Valid")
+
+import datetime
+
+
+start_y = input("Input the year the project is starting: ")
+start_m = input("Input the month the project is starting: ")
+start_d = input("Input the day the project is starting: ")
+
+x = 0
+
+while x == 0:
+  while len(str(start_y)) != 4 or (int(start_y)) < 2000:
+    start_y = input("Input the valid year the project is starting: ")
+  while int(start_m) < 0 or int(start_m) > 12:
+    start_m = input("Input the valid month the project is starting: ")
+  while int(start_d) < 0 or int(start_d) > 31:
+    start_d = input("Input the valid day the project is starting: ")
+  x == 1
+
+
+end_y = input("Input the year the project is ending: ")
+end_m = input("Input the month the project is ending: ")
+end_d = input("Input the day the project is ending: ")
+
+x = 0 
+
+while x == 0:
+  while len(str(end_y)) != 4 or (int(end_y)) < 2000:
+    end_y = input("Input the valid year the project is starting: ")
+  while int(end_m) < 0 or int(end_m) > 12:
+    end_m = input("Input the valid month the project is starting: ")
+  while int(end_d) < 0 or int(end_d) > 31:
+    end_d = input("Input the valid day the project is starting: ")
+  x == 1
+
+
+start = date(start_y,start_m,start_d)
+end = date(end_y,end_m,end_d)
+
+days = start - end
+
+print(days.days)
