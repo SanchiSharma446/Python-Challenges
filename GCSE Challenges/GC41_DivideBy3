@@ -1,0 +1,6 @@
+num = int(input('Input a num you\'de like to check'))
+r = num%3
+if r > 1:
+  print('Not divisible by 3')
+else:
+  print('Divisble by 3')
