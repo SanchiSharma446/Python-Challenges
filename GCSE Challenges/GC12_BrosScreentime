@@ -1,0 +1,13 @@
+import time
+
+tim = float(input('how much free time do you both have in hours?'))
+tim = tim/2
+print(tim)
+tim = int(tim * 60**2)
+
+print('your timer starts now!')
+time.sleep(tim)
+print('Timer over! Next person\'s turn')
+print('your timer starts now!')
+time.sleep(tim)
+print('Timer over! Free time is up')
