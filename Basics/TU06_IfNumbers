@@ -1,0 +1,8 @@
+MyHeight = 171
+TheirHeight = int(input("How tall are you?"))
+if MyHeight > TheirHeight:
+    print("Im taller than you!")
+elif MyHeight == TheirHeight:
+   print("We're the same height!")
+else:
+   print("I'm shorter than you!")
