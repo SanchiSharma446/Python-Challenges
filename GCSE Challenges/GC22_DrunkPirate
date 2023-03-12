@@ -1,0 +1,8 @@
+import turtle
+import random
+wn = turtle.Screen()
+pirate = turtle.Turtle()
+drunk = True
+while drunk == True:
+  pirate.left(random.randint(0,180))
+  pirate.forward(100)
