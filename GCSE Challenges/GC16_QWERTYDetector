@@ -1,0 +1,5 @@
+text = input('Input text you want to check')
+if 'qwerty' in text:
+  print('qwerty has been found!')
+else:
+  print('no qwerty :(')
