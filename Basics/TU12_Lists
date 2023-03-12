@@ -1,0 +1,7 @@
+List = ["one","two","three","four","five"]
+print(*List[0:4],sep=",")
+vglist = ["Mario","Aloy","Beidou","Link"]
+print(vglist)
+vgnew = input("add any characters you want!")
+vglist.append(vgnew)
+print(vglist)
