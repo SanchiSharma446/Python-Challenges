@@ -1,0 +1,6 @@
+import random 
+name = input("Who is the unfortunate soul whom you have tasked me to roast?")
+print(name,"? I see. Give me a second to think")
+roasts = ["no u","you have more faces than mount rushmore","If i had a face like yours i'd sue my parents","I'm jealous of people who don't know you","you should use a gluestick instead of chapstick"]
+chosen = random.choice(roasts)
+print(name,",",chosen)
