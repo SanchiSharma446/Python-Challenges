@@ -1,0 +1,19 @@
+#Create demo code to demonstrate the ideas of: sequence, selection, repetition & variable.
+
+#variable
+something ='anything'
+something = 6
+
+#repetiton
+for i in range (0,something):
+  print('something')
+
+#sequence
+something = input('input something')
+print(something)
+
+#selection
+if something == 'something':
+  print('very smart')
+else:
+  print('i see you thought of something')
