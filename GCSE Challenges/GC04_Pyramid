@@ -1,0 +1,4 @@
+num = int(input('How many tiers will your pyramid have?'))
+
+for i in range (0,num+1):
+  print('x'*(i+(i-1)))
