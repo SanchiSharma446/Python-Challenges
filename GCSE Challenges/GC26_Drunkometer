@@ -1,0 +1,6 @@
+phrase = "peter piper picked a peck o' pickled peppers"
+check = input("Please retype this phrase exactly:", phrase)
+if check == phrase:
+  print("You are competent enough to operate this machinery!")
+else:
+  print("You are not competent enough to operate this machinery!")
