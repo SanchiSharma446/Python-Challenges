@@ -1,0 +1,6 @@
+number = int(input("What number would you like me to test the divisibility of?"))
+ans = number % 3
+if ans > 0:
+  print("your number is not divisable")
+else:
+  print ("Your number is divisable!")
