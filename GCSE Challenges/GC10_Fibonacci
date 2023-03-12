@@ -1,0 +1,8 @@
+n = 0
+b = 1
+fib = [0,1]
+
+for i in range (0,100):
+  add = fib[i]+fib[i+1]
+  fib.append(add)
+  print(fib[i])
