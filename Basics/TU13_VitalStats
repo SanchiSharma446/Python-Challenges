@@ -1,0 +1,12 @@
+List = [7,2,9,4,3]
+print(List)
+print('sum')
+print(sum(List))
+print('min')
+print(min(List))
+print('max')
+print(max(List))
+print('length')
+print(len(List))
+print('mean')
+print(sum(List)/len(List))
