@@ -1,0 +1,4 @@
+num = int(input('which times table would you like?'))
+print('your time table!')
+for i in range (0,11):
+  print(f'{num}*{i} = {num*i}')
