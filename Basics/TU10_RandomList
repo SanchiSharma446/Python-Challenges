@@ -1,0 +1,17 @@
+import random
+names = ["Bob","Joe","Lauren","Sarah"]
+print((*names),sep=",")
+chosen = random.choice(names)
+print(chosen)
+test = input("Would you like to keep this name?")
+YES = ["y","Y","yes","Yes"]
+NO = ["n","N","no","No"]
+if test in YES:
+  print("noted!")
+  print((*names),sep=",")
+elif test in NO:
+    names.remove(chosen)
+    print("Done!")
+    print((*names),sep=",")
+else:
+   print("Wrong Input!")
