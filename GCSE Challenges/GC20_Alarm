@@ -1,0 +1,5 @@
+ans1 = 51/24
+round(ans1,)
+ans2 = 51-(ans1*24)
+ans3 = ans2 + 2
+print("It is currenly 2. The spaceship will be fully charged 51hrs on",ans3,"0am which is when the alarm will go off as well")
