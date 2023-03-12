@@ -1,0 +1,5 @@
+while True:
+  a = ["cs","CS",'computer science',"Computer Science"]
+  favsubject = input("What's your favourite subject?")
+  if favsubject in a: 
+    break
