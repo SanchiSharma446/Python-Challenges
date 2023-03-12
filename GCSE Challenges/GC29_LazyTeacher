@@ -1,0 +1,11 @@
+import random
+remarks = ["was a fabulous student! No worries here.","could have spoken more in class.","could have talked less to their friends in class.","is doing alright so far.","may need more assistance with this chapter."]
+number = int(input("How many students in this class?"))
+a = 0
+while number > 0:
+  chosen = random.choice(remarks)
+  print("student no.",a,chosen)
+  a = a+1
+  number = number-1
+
+  
