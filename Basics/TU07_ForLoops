@@ -1,0 +1,6 @@
+print("even numberes from 0-100")
+for i in range(0,102,2):
+  print(i)
+print("countdown from 1000 in steps of 10")
+for b in range(1000,0,-10):
+  print(b)
