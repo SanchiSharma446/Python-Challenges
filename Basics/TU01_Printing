@@ -1,0 +1,10 @@
+print("Hello World!")
+
+print(5*5)
+print(5-5)
+print(5+5)
+print(5/5)
+print(5**5)
+print(15*25-56*16**2)
+print(22/7)
+print("you get an approximate of pi")
