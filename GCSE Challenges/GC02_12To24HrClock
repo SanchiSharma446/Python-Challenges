@@ -1,0 +1,18 @@
+Hour = int(input("What hour is it there?"))
+if Hour > 12: 
+  print("Please input a 12hr clock time")
+  Hour = int(input("What hour is it there?"))
+else:
+ print("ok")  
+Min = int(input("How many minutes past the hour?"))
+if Min > 59:
+  print("Please input a value of 0-59")
+  Min = int(input("How many minutes past the hour?"))
+else:
+  print("ok")
+Ampm = input("Is it am or pm?")
+if Ampm in ["am","AM","Am"]:
+ print("it is",Hour,":",Min,"pm")
+elif Ampm in ["pm","PM","Pm"]:
+ Time = Hour + 12
+ print("it is",Time,":",Min,"pm")
