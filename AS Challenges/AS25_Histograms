@@ -1,0 +1,17 @@
+def histogram(a,b,c):
+  count = 0
+  while count < a:
+    print("*",end="")
+    count = count + 1
+  count = 0
+  print('\n')
+  while count < b:
+    print("*",end="")
+    count = count + 1
+  count = 0
+  print('\n')
+  while count < c:
+    print("*",end="")
+    count = count + 1
+
+histogram(4,9,7)
