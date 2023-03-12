@@ -1,5 +1,7 @@
-t = 10
-while t > -1:
-  print(t)
-  t = t-1
-print("Launching!")
+import time
+
+print('Launching in:')
+for i in range (10,0,-1):
+  print(f'{i}...')
+  time.sleep(1)
+print('Takeoff!')
