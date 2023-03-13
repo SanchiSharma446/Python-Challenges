@@ -1,0 +1,14 @@
+while True:
+    P1 = input("Player 1, Stay silent(0) or confess(1)?")
+    Comp = random.choice([1, 0])
+    print(P1,Comp)
+    if Comp == 1 and P1 == "1":
+        print('You both confessed, jail for 5 years! ')
+    elif Comp == 1 and P1 == "0":
+        print('P2 confessed, they\'re freed and you\'re in jail for 20 years!')
+    elif Comp == 0 and P1 == "1":
+        print('You confessed, you\'re freed and P2 in jail for 20 years!')
+    else:
+        print('Neither of you confessed. Only one year for you both.')
+    if input("Want to play again? (y/n)") in ["N", "n"]:
+        break
