@@ -1,0 +1,22 @@
+from os import system
+
+score1 = 0
+score2 = 0
+for i in range(5):
+    P1Q = input("P1, Write a question about yourself!")
+    P1A = input("Write the answer to that question.")
+    system('clear')
+    if input(f"Player 2, {P1Q}") == P1A:
+        print("Correct!")
+        score2 += 1
+    else:
+        print("Incorrect!")
+    P2Q = input("Your turn P2. Write a question about yourself!")
+    P2A = input("Write the answer to that question.")
+    system('clear')
+    if input(f"Player 1, {P2Q}") == P2A:
+        print("Correct!")
+        score2 += 1
+    else:
+        print("Incorrect!")
+print(f"Final scores: P1 - {score1}, p2 - {score2}")
