@@ -1,0 +1,15 @@
+import random
+
+score = 0
+while True:
+    for i in range(5):
+        a = random.randint(1,12)
+        b = random.randint(1,12)
+        if input(f"Write the answer to {a}*{b}") == str(a * b):
+            print("Correct!")
+            score += 1
+        else:
+            print("Wrong!")
+    if input("End game? (y)") in ["y", "Y"]:
+        break
+print(f"Total score, {score}")
