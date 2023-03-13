@@ -1,0 +1,18 @@
+total = 0
+
+while True:
+    food = input("Please input what food you've eaten")
+    try:
+        cal = int(input("How many calories did it contain"))
+    except ValueError:
+        print("Please enter a number")
+    else:
+        total = total + cal
+        if input("Do you have more food to input If not, write \"end day\" ") == "end day":
+            break
+
+print(f"You've eaten {cal} calories.", end="")
+if cal > 2250:
+    print(f"eat {cal - 2250} less calories next time")
+else:
+    print(f"eat {2250 - cal} more calories today!")
