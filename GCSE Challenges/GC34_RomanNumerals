@@ -1,0 +1,4 @@
+import roman
+
+for i in range(100):
+    print(roman.toRoman(i+1))
