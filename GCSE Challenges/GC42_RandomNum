@@ -1,0 +1,8 @@
+import random 
+import statistics
+
+list = []
+
+for i in range(50):
+  list.append(random.randint(0,50))
+print(f"Largest number: {max(list)}, Smallest number: {min(list)}, Average {statistics.mean(list)}")
