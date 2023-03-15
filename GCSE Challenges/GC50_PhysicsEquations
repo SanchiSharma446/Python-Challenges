@@ -1,0 +1,69 @@
+def main():
+    while True:
+        equ = input('''Which Forumla would you like to solve?
+        F = ma (1)
+        d = mv (2)''')
+        if equ == "1":
+            fma()
+        elif equ == "2":
+            dmv()
+        else:
+            print("Please enter a valid number mentioned")
+
+
+def fma():
+    while True:
+        var = input("What variable would you like to calculate? f, m, a ?")
+        if var in ["f", "F"]:
+            try:
+                f = int(input("What is a?")) * int(input("What is m?"))
+            except ValueError:
+                print("please input numbers")
+            else:
+                return print(f"Your answer: {f}")
+        elif var in ["m", "M"]:
+            try:
+                m = int(input("What is f?")) / int(input("What is a?"))
+            except ValueError:
+                print("please input numbers")
+            else:
+                return print(f"Your answer: {m}")
+        elif var in ["a", "A"]:
+            try:
+                a = int(input("What is f?")) / int(input("What is m?"))
+            except ValueError:
+                print("please input numbers")
+            else:
+                return print(f"Your answer: {a}")
+        else:
+            print("please enter one of those values")
+
+
+def dmv():
+    while True:
+        var = input("What variable would you like to calculate? d, m, v ?")
+        if var in ["d", "D"]:
+            try:
+                d = int(input("What is m?")) * int(input("What is v?"))
+            except ValueError:
+                print("please input numbers")
+            else:
+                return print(f"Your answer: {d}")
+        elif var in ["m", "M"]:
+            try:
+                m = int(input("What is d?")) / int(input("What is v?"))
+            except ValueError:
+                print("please input numbers")
+            else:
+                return print(f"Your answer: {m}")
+        elif var in ["v", "V"]:
+            try:
+                v = int(input("What is d?")) / int(input("What is m?"))
+            except ValueError:
+                print("please input numbers")
+            else:
+                return print(f"Your answer: {v}")
+        else:
+            print("please enter one of those values")
+
+main()
