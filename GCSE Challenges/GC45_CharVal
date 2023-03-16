@@ -1,0 +1,4 @@
+if len(input("Input a char")) == 1:
+    print("char!")
+else:
+    print("not char :(")
