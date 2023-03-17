@@ -1,0 +1,7 @@
+while True:
+    try:
+        int(input("Whole numbers:"))
+    except ValueError:
+        print("Not whole number!")
+    else:
+        print("Whole number!")
