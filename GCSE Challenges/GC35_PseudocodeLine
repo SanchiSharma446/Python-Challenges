@@ -1,0 +1,15 @@
+PROCEDURE LineDraw(Line : INTEGER)
+  DECLARE Len : INTEGER
+    FOR Len ← 1 TO Line:
+      PRINT '_'
+    NEXT Len
+ENDPROCEDURE
+
+User ← INPUT(“How long do you want your line to be?”)
+
+IF User < 0:
+  THEN
+    CALL LineDraw(User)
+  ELSE:
+    PRINT(“Line must be longer than 0”) 
+ENDIF
