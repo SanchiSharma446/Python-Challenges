@@ -1,0 +1,12 @@
+while True:
+    email = input("Please input your email")
+    if not email.__contains__('@'):
+        print("You email does not contain an @ symbol")
+    if email.__contains__('@'):
+        x = email.split("@", 1)
+        if 64 > len(x[0]) > 0 and 253 > len(x[1]) > 0 and x[1].__contains__("."):
+            print("Your email is valid")
+            break
+        else:
+            print("Personal info must be under 64 char and greater than 0.Domain name must be shorter than 253 chars "
+                  "and greater than 0 and contain a dot")
