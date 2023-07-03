@@ -1,0 +1,11 @@
+import datetime
+
+def timed():
+  check = input("Type'the lazy fox jumped over the brown dog'")
+  while check != 'the lazy fox jumped over the brown dog':
+     check = input("Type 'the lazy fox jumped over the brown dog' correctly")
+  
+start_time = datetime.datetime.now()  
+timed()
+time_taken = datetime.datetime.now()-start_time  
+print(time_taken)  
