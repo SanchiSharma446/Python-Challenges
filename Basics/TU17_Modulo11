@@ -1,0 +1,12 @@
+calc = [1, 2, 3, 4, 3]
+weight = [5, 4, 3, 2]
+total = 0
+
+for i in range(0, len(calc)-1):
+    total = total + calc[i]*weight[i]
+
+total = total % 11
+total = 11 - total
+
+if total == calc[4]:
+    print('Checksum succesful')
