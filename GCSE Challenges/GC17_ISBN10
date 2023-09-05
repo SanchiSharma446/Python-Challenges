@@ -1,0 +1,20 @@
+code = input("Input ISBN code")
+weight = [10, 9, 8, 7, 6, 5, 4, 3, 2]
+total = 0
+
+for i in range(0, len(code) - 1):
+    total = total + int(code[i]) * weight[i]
+total = total % 11
+
+mod = 11 - total
+
+if mod == 11:
+    mod = 0
+elif mod == 10:
+    mod = 'X'
+
+
+if str(mod) == code[-1]:
+    print("Check digit verified")
+else:
+    print("Check digit not verified")
