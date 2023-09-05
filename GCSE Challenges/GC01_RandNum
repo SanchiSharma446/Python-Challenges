@@ -1,0 +1,15 @@
+import random
+
+num = random.randint(1, 100)
+
+while True:
+    ans = int(input("Guess the number"))
+    if ans > 100 or ans < 1:
+        print("Out of range!")
+    elif ans > num:
+        print("Too large try again!")
+    elif ans < num:
+        print("Too small try again!")
+    elif ans == num:
+        print("You got it!")
+        break
