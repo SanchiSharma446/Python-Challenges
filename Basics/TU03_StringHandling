@@ -1,0 +1,14 @@
+# TU03
+# EX 1
+MyAge = int(input('What is your age?'))
+print('I am younger than %d' % MyAge)
+print("%d is a very nice age to be!" % MyAge)
+
+# EX 2
+ComputerAge=3.45
+ComputerName='Skynet'
+yAge = int(input('What is your age?'))
+while MyAge < 3.45:
+    MyAge = int(input('There\'s no way you\'re younger than a computer! What is your age?'))
+
+print('I am older than %d, because I am %.3f My name is %s.' % (MyAge,ComputerAge,ComputerName))
