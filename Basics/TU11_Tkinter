@@ -1,0 +1,19 @@
+import tkinter
+import random
+
+window = tkinter.Tk()
+
+names = ['Andy', 'Bopal', 'Carolina', 'Dieter', 'Emile', 'Francis', 'Gertrude', 'Holly', 'Ishan', 'Jalbinder', 'Kapoor', 'Layla']
+
+def NamePicker():
+    RandName = random.choice(names)
+    name.configure(text="Random Name Generated: " + str(RandName))
+
+
+MyTitle = tkinter.Label(window, text="Random Name Generator", font="Helvetica 16 bold")
+MyTitle.pack()
+MyButton = tkinter.Button(window, text="OK", command=NamePicker)
+MyButton.pack()
+name = tkinter.Label(window, font="Helvetica 16 bold")
+name.pack()
+window.mainloop()
