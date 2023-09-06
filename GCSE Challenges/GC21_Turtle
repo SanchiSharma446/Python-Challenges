@@ -1,0 +1,59 @@
+import turtle
+
+
+def one():
+    for i in range(1000):
+        print("We like Python's turtles!")
+
+
+def three():
+    months = ['January', 'February', 'March', 'April'
+        , 'May', 'June', 'July', 'August', 'September', 'November', 'December']
+    for i in months:
+        print(f"One of the months of the year is {months}")
+
+
+def four():
+    wn = turtle.Screen()  # Creates a playground for turtles
+    tess = turtle.Turtle()
+    tess.left(3645)
+    wn.mainloop()  # tess keeps rotating in a circle and eventually faces on the bearing 45º
+
+
+def five_a():
+    xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+    for i in range(len(xs)):
+        print(xs[i])
+
+
+def five_b():
+    xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+    for i in range(len(xs)):
+        print(f'{xs[i]}\n{xs[i] ** 2}')
+
+
+def five_c():
+    total = 0
+    xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+    for i in range(len(xs)):
+        total = total + xs[i]
+    print(total)
+
+
+def five_d():
+    total = 0
+    xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+    for i in range(len(xs)):
+        total = total * xs[i]
+    print(total)
+
+
+def six():
+    sides = [3, 4, 6, 8]
+    wn = turtle.Screen()
+    tess = turtle.Turtle()
+    for i in range(4):
+        for j in range(sides[i]):
+            tess.forward(50)
+            tess.left(180-((sides[i] - 2) * 180) / sides[i])
+    wn.mainloop()
