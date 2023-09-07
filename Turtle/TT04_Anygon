@@ -1,0 +1,7 @@
+import turtle
+sides = int(input("How many sides will your shape have?"))
+
+for i in range(sides):
+    turtle.forward(50)
+    turtle.left(360 / sides)
+turtle.done()
