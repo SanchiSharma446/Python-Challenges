@@ -1,0 +1,19 @@
+import turtle
+
+turtle.speed(30)
+
+for i in range(300, -300, -10):
+    turtle.penup()
+    turtle.goto(-400, i)
+    turtle.pendown()
+    turtle.forward(600)
+
+turtle.setheading(270)
+
+for i in range(200, -400, -10):
+    turtle.penup()
+    turtle.goto(i, 400)
+    turtle.pendown()
+    turtle.forward(800)
+
+turtle.done()
