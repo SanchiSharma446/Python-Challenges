@@ -1,0 +1,29 @@
+import turtle
+
+def draw_bar(height):
+    turtle.setheading(0)
+    turtle.begin_fill()
+    turtle.forward(20)  
+    turtle.left(90)
+    turtle.forward(height)
+    turtle.left(90)
+    turtle.forward(20)  
+    turtle.left(90)
+    turtle.forward(height)
+    turtle.end_fill()
+
+
+data = [100, 50, 120, 80, 200] #modifiable
+
+turtle.speed(1)
+turtle.penup()
+turtle.goto(-200, -100)
+turtle.pendown()
+
+# Draw bars
+for value in data:
+    draw_bar(value)
+    turtle.setheading(0)
+    turtle.forward(40) 
+    
+turtle.done()
