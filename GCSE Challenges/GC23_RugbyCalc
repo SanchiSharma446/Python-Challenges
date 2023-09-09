@@ -1,0 +1,23 @@
+Team_1 = input("What is Team 1 called?")
+Try1, Conv1, Penalty1 = input("Input the number of Try, Conversion, and Penalty kicks recorded for said team "
+                              "seperated by commas.").split(',', maxsplit=2)
+
+Team_2 = input("What is Team 2 called?")
+Try2, Conv2, Penalty2 = input("Input the number of Try, Conversion, and Penalty kicks recorded for said team "
+                              "seperated by commas.").split(',', maxsplit=2)
+
+point1 = int(Try1) * 5 + int(Conv1) * 2 + int(Penalty1) * 3
+point2 = int(Try2) * 5 + int(Conv2) * 2 + int(Penalty2) * 3
+
+print(f'Team 1 scored {point1} points. They had {Try1} Tries, {Conv1} '
+      f'Conversions, and {Penalty1} Penalties.')
+
+print(f'Team 2 scored {point2} points. They had {Try2} Tries, {Conv2} '
+      f'Conversions, and {Penalty2} Penalties.')
+
+if point1 > point2:
+    print('Therefore, Team 1 won.')
+elif point2 > point1:
+    print('Therefore, Team 2 won.')
+else:
+    print("Therefore, it is a tie.")
