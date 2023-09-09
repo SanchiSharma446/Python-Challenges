@@ -1,0 +1,19 @@
+items = {'Water': 2, 'Chips': 5, 'Juice': 3, 'Cola': 3, 'Sandwich': 6}
+
+money = int(input("How much money do you have?"))
+buy = input("What item do you want? Water, Chips, Juice, Cola or a Sandwich?")
+
+while True:
+    while items.get(buy) is None or money < items[buy]:
+        buy = input("Error: Item not in vending machine or you do not have enough money to buy this item. Pick valid "
+                    "item.")
+    money = money - items[buy]
+    if money == 0:
+        print("No more money left. Ending transaction.")
+        break
+    if cont := input("Would you like to buy more or end transaction?") in ['y', 'Y', 'Yes', 'yes']:
+        buy = input("What item do you want? Water, Chips, Juice, Cola or a Sandwich?")
+    elif cont in ['n', 'N', 'No', 'no']:
+        break
+
+print("Thank you for your purchase")
