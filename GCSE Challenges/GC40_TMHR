@@ -1,0 +1,1 @@
+print(f'Max Heart rate to achieve during exercise is: {0.7 * (225 - int(input("What is your age?")))}.')
