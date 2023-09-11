@@ -1,16 +1,10 @@
-PROCEDURE DefaultLine 
-    CALL Line(60)
-ENDPROCEDURE
-PROCEDURE Line(Size : INTEGER)
-    DECLARE Length : INTEGER
-    FOR Length ← 1 TO Size
+PROCEDURE Draw(Length : INTEGER)
+    DECLARE i : INTEGER
+    FOR i ← 1 TO Length
         OUTPUT '-'
-    NEXT Length
+    NEXT i
 ENDPROCEDURE
-//insert variable here
-IF MySize = -1 
-  THEN
-    CALL DefaultLine 
-  ELSE
-    CALL Line(MySize) 
-ENDIF
+
+Draw(10)
+
+>>> "----------"
