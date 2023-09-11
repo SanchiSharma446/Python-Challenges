@@ -1,0 +1,16 @@
+PROCEDURE DefaultLine 
+    CALL Line(60)
+ENDPROCEDURE
+PROCEDURE Line(Size : INTEGER)
+    DECLARE Length : INTEGER
+    FOR Length ← 1 TO Size
+        OUTPUT '-'
+    NEXT Length
+ENDPROCEDURE
+//insert variable here
+IF MySize = -1 
+  THEN
+    CALL DefaultLine 
+  ELSE
+    CALL Line(MySize) 
+ENDIF
