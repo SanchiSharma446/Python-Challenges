@@ -1,10 +1,10 @@
 PROCEDURE Draw(Length : INTEGER)
     DECLARE i : INTEGER
     FOR i ← 1 TO Length
-        OUTPUT '-'
+        PRINT '-'
     NEXT i
 ENDPROCEDURE
 
 Draw(10)
 
->>> "----------"
+>>> ----------
