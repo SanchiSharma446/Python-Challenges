@@ -1,0 +1,44 @@
+import random
+from string import punctuation
+
+wordlist = ["TAKES", "KNOWN", "KICKS", "STARK", "BOOTS", "BATON",
+            "CRIME", "CLEAR", "WASTE", "CLOSE", "SWORD", "FARGO",
+            "SLAVE", "MAYBE", "MALES"]
+
+word = random.choice(wordlist)
+tries = 4
+
+print("BOOTING UP TERMINAL:")
+c = 0
+text = ""
+while c != len(wordlist):
+    for i in range(random.randint(5, 10)):
+        text = text + random.choice(punctuation)
+    text = text + wordlist[c]
+    for i in range(random.randint(5, 10)):
+        text = text + random.choice(punctuation)
+    c += 1
+
+for i in range(0, len(text), 15):
+    print(f"0xBE{random.randint(10,99)}  {text[i:i+15]}")
+
+while tries != 0:
+    like = 0
+    guess = input("PASSWORD REQUIRED:").upper()
+    if guess not in wordlist:
+        print("INPUT NOT IN LIST OF WORDS.")
+        tries -= 1
+        print(f"{tries} ATTEMPTS REMAINING.")
+    elif guess == word:
+        print("PASSWORD ACCEPTED.")
+        break
+    else:
+        tries -= 1
+        print(f"PASSWORD DENIED. {tries} ATTEMPTS REMAINING.")
+        for i in range(len(word)):
+            if guess[i] == word[i]:
+                like += 1
+        print(f"PASSWORD HAS LIKENESS OF {like} WITH INPUT. TRY AGAIN.")
+
+if tries == 0:
+    print("ACCESS TO TERMINAL DENIED")
