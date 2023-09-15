@@ -1,0 +1,20 @@
+from string import punctuation
+
+text = input("What is the name of the file you want to check?")
+
+words = ""
+with open(text, "r") as file:
+    for line in file:
+        words = words + line.strip()
+
+token = -1
+length = len(words)
+
+for i in range(len(words)):
+    if words[i] == " ":
+        token += 1
+        length -= 1
+    if words[i] in punctuation:
+        length -= 1
+
+print(f"Average length of words is approx {length//token} letters")
