@@ -1,0 +1,47 @@
+from random import choice
+
+pwin = 0
+cwin = 0
+
+print("Playing best of 3!")
+
+while pwin < 3 and cwin < 3:
+    print(cwin, pwin)
+    turn = input("Rock paper scissors?").lower()
+    while turn not in ["rock", "paper", "scissors"]:
+        turn = input("Not a valid input. Rock paper scissors?").lower()
+    c_turn = choice(["rock", "paper", "scissors"])
+    if turn == "rock":
+        if c_turn == "rock":
+            print("Tie!")
+        elif c_turn == "paper":
+            print("Paper beats rock, point to computer!")
+            cwin += 1
+        elif c_turn == "scissors":
+            print("Rock beats scissors, point to player!")
+            pwin += 1
+    if turn == "paper":
+        if c_turn == "rock":
+            print("Paper beats rock, point to player!")
+            pwin += 1
+        elif c_turn == "paper":
+            print("Tie!")
+        elif c_turn == "scissors":
+            print("Scissors beats paper, point to computer!")
+            cwin += 1
+    if turn == "scissors":
+        if c_turn == "rock":
+            print("Rock beats scissors, point to computer!")
+            cwin += 1
+        elif c_turn == "paper":
+            print("Scissors beats paper, point to player!")
+            pwin += 1
+        elif c_turn == "scissors":
+            print("Tie!")
+
+print(f"Computer: {cwin} \nPlayer: {pwin}")
+
+if pwin > cwin:
+    print("Player won!")
+else:
+    print("Computer won!")
