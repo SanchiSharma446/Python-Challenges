@@ -1,0 +1,17 @@
+from random import choice
+words = []
+passphrase = ""
+
+with open("words.txt", "r") as file: #from external file of all words
+    for line in file:
+        if len(line) < 5:
+            words.append(line.rstrip())
+
+length = int(input("Roughly how long would you like your pass phrase to be?"))
+while length < 5:
+    length = int(input("That's too short. Please input a larger number"))
+
+while len(passphrase) < length:
+    passphrase = passphrase + choice(words) + " "
+
+print(passphrase)
