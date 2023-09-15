@@ -1,0 +1,28 @@
+# 3 vowels
+# double letters
+# not has: ab, cd, pq, xy
+strings = []
+nicestr = []
+with open("naughtynice.txt", "r") as file:
+    for line in file:
+        strings.append(line.rstrip())
+
+for i in range(len(strings)):
+    nice1 = False
+    nice2 = False
+    naughty = False
+    vow = 0
+    check = strings[i]
+    for j in range(1, len(check)):
+        if check[j] == check[j - 1]:
+            nice1 = True
+        if check[j] in ["a", "e", "i", "o", "u"]:
+            vow += 1
+        if vow > 2:
+            nice2 = True
+        if check[j - 1] + check[j] in ["ab", "cd", "pq", "xy"]:
+            naughty = True
+    if nice1 and nice2 and not naughty:
+        nicestr.append(strings[i])
+
+print(nicestr)
