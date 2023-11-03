@@ -1,0 +1,39 @@
+class Wrexham:
+    def __init__(self):
+        self.__PlayerNumber = ""
+        self.__Forename = ""
+        self.__Surname = ""
+        self.__Position = ""
+        self.__CommunityInvolvment = 0.0
+        self.__Injured = False
+
+    def Constructor(self, PlayNo, Fore, Sur, Pos):
+        self.__PlayerNumber = PlayNo
+        self.__Forename = Fore
+        self.__Surname = Sur
+        self.__Position = Pos
+
+    def GetPlayerInfo(self):
+        return [self.__Forename, self.__Surname, self.__Position]
+
+    def ChangeCommunityInvolvement(self, change):
+        self.__CommunityInvolvment = change
+
+    def ChangeInjured(self):
+        self.__Injured = not self.__Injured
+
+
+temp = []
+players = []
+
+with open("Wrexham.txt", "r") as file:
+    try:
+        for line in file:
+            temp.append(line.rstrip())
+        for i in range(0, len(temp), 4):
+            Player = Wrexham()
+            Player.Constructor(temp[i], temp[i+1], temp[i+2], temp[i+3])
+            players.append(Player)
+
+    except OSError:
+        print("File not found.")
