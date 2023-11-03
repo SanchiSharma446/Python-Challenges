@@ -1,0 +1,32 @@
+import random
+
+tempArray = []
+
+with open("DadJokes.txt", "r") as file:
+    for line in file:
+        tempArray.append(line.rstrip())
+
+
+class DadJokes:
+    def __init__(self):
+        self.__joke = ""
+        self.__ans = ""
+
+    def Constructor(self):
+        num = random.randint(0,len(tempArray))
+        while num%2 != 0:
+            num = random.randint(0,len(tempArray))
+        self.__joke = tempArray[num]
+        self.__ans = tempArray[num+1]
+
+    def PrintRandomJoke(self):
+        ans = input(self.__joke)
+        if ans != self.__ans:
+            print(self.__ans)
+        else:
+            print("Correct!")
+
+
+trial = DadJokes()
+trial.Constructor()
+trial.PrintRandomJoke()
