@@ -1,0 +1,28 @@
+import turtle
+
+
+class Pattern:
+    def __init__(self):
+        self.__angle = 0
+        self.__times = 0
+
+    def Constructor(self, angle, times):
+        self.__angle = angle
+        self.__times = times
+
+    def draw_pattern(self):
+        colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
+        turtle.setup(800, 600)  # setting window dimensions
+        turtle.bgcolor('black')
+        turtle.speed(100)
+        for x in range(self.__times):
+            turtle.pencolor(colors[x % 6])
+            turtle.width(x / 100 + 1)
+            turtle.forward(x)
+            turtle.left(self.__angle)
+        turtle.done()
+
+
+mypattern = Pattern()
+mypattern.Constructor(120, 100)
+mypattern.draw_pattern()
