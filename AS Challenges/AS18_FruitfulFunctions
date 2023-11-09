@@ -1,0 +1,110 @@
+def turn_clockwise(d):
+    sides = ["N", "E", "S", "W"]
+    for i in range(len(sides)):
+        if d == sides[i] and d == "W":
+            return "N"
+        elif d == sides[i]:
+            return sides[i+1]
+        elif d not in sides:
+            return None
+
+
+def numtoday(num):
+    days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    if num not in days:
+        return None
+    return days[num]
+
+
+def daytonum(day):
+    days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    for i in range(6):
+        if days[i] == day:
+            return i
+    return None
+
+def dayofreturn(num, len):
+    new = num + len % 7
+    if new > 6:
+        new = new % 7
+        return numtoday(new)
+
+
+def daysinmonth(month):
+    if month == "Feb":
+        return 28
+    if month in ["Jan", "March", "May", "July", "Aug", "Oct", "Dec"]
+        return 31
+    if month in ["April", "June", "Sept", "Nov"]:
+        return 30
+
+def to_secs(h, m, s):
+    return int(h*3600 + m*60 + s)
+
+def hours_in(s):
+    return int(s/3600)
+
+def mins_in(s):
+    s = hours_in(s)
+    return int(s/60)
+
+def secs_in(s):
+    s = hours_in(s)
+    s = mins_in(s)
+    return s
+
+# 2, bcus 3%4 is 0. 3, bcus 3/4 is 0.75, 6 bcus 4-2+2 is 4
+
+def compare(a,b):
+    if a > b:
+        return 1
+    elif a == b:
+        return 0
+    elif a < b:
+        return -1
+
+
+def find_hypot(a, b):
+    return ((a ** 2) + (b ** 2)) ** 0.5
+
+
+def slope(x1, y1, x2, y2):
+    return (y2-y1)/(x2-x1)
+
+
+def intercept(x1, y1, x2, y2):
+    m = slope(x1, y1, x2, y2)
+    return  y1 - m*x1
+
+
+def is_even(n):
+    if n%2 == 0:
+        return True
+    return False
+
+
+def is_odd(n):
+    if is_even(n):
+        return False
+    return True
+
+
+def is_factor(a,b):
+    if b%a == 0:
+        return True
+    return False
+
+
+def is_multiple(a,b):
+    if is_factor(b, a):
+        return True
+    else:
+        return False
+
+
+def f2c(t):
+    return round(((t-32)/1.8), 2)
+
+
+def c2f(t):
+    return round((t*1.8)+32, 2)
