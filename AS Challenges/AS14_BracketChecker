@@ -1,0 +1,21 @@
+def bracket_checker(input_str):
+    stack = []
+    brackets = {'(': ')', '[': ']', '{': '}'}
+
+    for char in input_str:
+        if char in brackets.keys():
+            stack.append(char)
+        elif char in brackets.values():
+            if not stack or brackets[stack.pop()] != char:
+                return False
+
+    return not stack
+
+# Example usage:
+input_string = "[{()}]"
+result = bracket_checker(input_string)
+
+if result:
+    print("All brackets are balanced.")
+else:
+    print("Brackets are not balanced.")
