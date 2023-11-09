@@ -1,0 +1,55 @@
+def numtoday(num):
+    days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    return days[num]
+
+
+def dayofreturn(num, len):
+    new = num + len % 7
+    if new > 6:
+        new = new % 7
+        return numtoday(new)
+
+
+# 3.
+# a=<b
+# a < b
+# a < 18 and day != 3
+# a < 18 day == 3
+
+# 4.
+# true
+# false
+# false
+# true
+
+# 5.
+# T, T, T, T, T, T, T, T
+
+def mark(num):
+    match num:
+        case _ if num < 40:
+            return "F3"
+        case _ if num < 45:
+            return "F2"
+        case _ if num < 50:
+            return "F1 Supp"
+        case _ if num < 60:
+            return "Third"
+        case _ if num < 70:
+            return "Second"
+        case _ if num < 75:
+            return "Upper Second"
+        case _ if num >= 75:
+            return "First"
+
+
+def find_hypot(a, b):
+    return ((a ** 2) + (b ** 2)) ** 0.5
+
+
+def is_rightangled(a, b, c):
+    nums = [a,b,c]
+    nums.sort()
+    if int(nums[1] ** 2 + nums[2] ** 2) == int(nums[3] ** 2):
+        return True
+    return False
