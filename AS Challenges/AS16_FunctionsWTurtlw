@@ -1,0 +1,76 @@
+import turtle
+
+
+def square1():
+    for j in range(4):
+        for i in range(4):
+            turtle.forward(20)
+            turtle.left(90)
+        turtle.penup()
+        turtle.forward(40)
+        turtle.pendown()
+
+
+def squares2():
+    turtle.penup()
+
+    for i in range(5):
+        turtle.goto(-i * 20, -i * 20)
+        turtle.pendown()
+        for j in range(4):
+            turtle.forward(i * 40)
+            turtle.left(90)
+        turtle.penup()
+
+    turtle.done()
+
+
+def n_gon(s, l):
+    angle = 360 / s
+    turtle.penup()
+
+    for i in range(s):
+        turtle.pendown()
+        turtle.forward(l)
+        turtle.left(angle)
+        turtle.penup()
+
+    turtle.done()
+
+
+def spiral(turn):
+    turtle.speed(20)
+    turtle.goto(0, 0)
+    r = 90
+    l = 2
+    for i in range(100):
+        turtle.forward(l)
+        l += 2
+        turtle.left(r)
+        if i % 4 == 0:
+            r += turn
+    turtle.done()
+
+
+def sum_to(n):
+    sum = 0
+    for i in range(n):
+        sum += (i + 1)
+    return sum
+
+
+def are_of_circle(r):
+    return 3.1415 * r ^ 2
+
+def star():
+    for i in range(5):
+        turtle.forward(100)
+        turtle.right(144)
+
+def five_star():
+    for i in range(5):
+        star()
+        turtle.right(144)
+        turtle.forward(350)
+        turtle.pendown()
+
