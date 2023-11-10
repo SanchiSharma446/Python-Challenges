@@ -1,0 +1,23 @@
+print(state := 'CLOSED')
+
+while True:
+    user_input = input(">")
+    match state:
+        case _ if state == 'CLOSED' and user_input == 'button_clicked':
+            print(state := 'OPENING')
+        case _ if state == 'OPEN' and user_input == 'button_clicked':
+            print(state := 'CLOSING')
+        case _ if state == 'OPENING' and user_input == 'cycle_complete':
+            print(state := 'OPEN')
+        case _ if state == 'CLOSING' and user_input == 'cycle_complete':
+            print(state := 'CLOSED')
+        case _ if state == 'OPENING' and user_input == 'button_clicked':
+            print(state := 'STOPPED_WHILE_OPENING')
+        case _ if state == 'CLOSING' and user_input == 'cycle_complete':
+            print(state := 'STOPPED_WHILE_CLOSING')
+        case _ if state == 'STOPPED_WHILE_OPENING' and user_input == 'button_clicked':
+            print(state := 'OPENING')
+        case _ if state == 'STOPPED_WHILE_CLOSING' and user_input == 'button_clicked':
+            print(state := 'CLOSING')
+        case _:
+            print("INVALID")
