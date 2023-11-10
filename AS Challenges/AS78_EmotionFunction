@@ -1,14 +1,9 @@
-def emotions(sm,sa,su):
-  if sm > 0:
-    print(" .     .",'\n','  C ','\n',"|_____|")
-  if sa > 0:
-    print(" /.   .\\",'\n','  C ','\n',"_______",'\n','|     |')
-  if su > 0:
-    print(' ^     ^','\n',".     .",'\n','  C ','\n',"_______",'\n','|_____|')
-
-print("Please input number higher than 0 if you wish to see the emotion:")
-a = int(input("Smile?"))
-b = int(input("Angry?"))
-c = int(input("Surprised?"))
-        
-emotions(a,b,c)
+def emotions(e):
+    if e == 'happy':
+        print(':)')
+    elif e == 'sad':
+        print(':(')
+    elif e == 'surprised':
+        print(':O')
+    else:
+        print("Not valid emotion")
