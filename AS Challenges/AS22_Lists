@@ -1,0 +1,26 @@
+import numpy
+
+def add_vector(list1,list2):
+    newlist = []
+    for i in range(len(list1)):
+        newlist.append((list1[i] + list2[i]))
+    return newlist
+
+
+def scalar_mult(num,list2):
+    newlist = []
+    for i in range(len(list2)):
+        newlist.append(num * list2[i])
+    return newlist
+
+
+def dot_product(list1,list2):
+    return numpy.dot(list1, list2)
+
+
+def cross_product(list1,list2):
+    return numpy.cross(list1, list2)
+
+
+def replace_all(sub, string, replace):
+    return string.replace(sub, replace)
