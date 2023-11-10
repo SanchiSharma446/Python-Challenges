@@ -1,0 +1,7 @@
+def mindiff(user_list):
+    diff = 0
+    for i in range(len(user_list)-1):
+        newdiff = int(((user_list[i] - user_list[i+1])**2)**0.5)
+        if newdiff < diff:
+            diff = newdiff
+    return diff
