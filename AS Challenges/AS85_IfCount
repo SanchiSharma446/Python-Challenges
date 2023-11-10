@@ -1,0 +1,26 @@
+male = ""
+female = ""
+
+with open("if.txt", "r") as file:
+    for line in file:
+        male += line.rstrip().lower()
+    print(male)
+
+
+with open("mam.txt", "r") as file:
+    for line in file:
+        female += line.rstrip().lower()
+    print(female)
+
+with open("if.txt", "a") as file:
+    file.write(str(malecount := male.count('if')))
+
+with open("mam.txt", "a") as file:
+   file.write(str(femalecount := female.count('if')))
+
+if femalecount > malecount:
+    print("The female version of the peom has more 'if's")
+elif femalecount == malecount:
+    print("Both poems have the same number of 'if's")
+else:
+    print("The male version of the poem has more 'if's")
