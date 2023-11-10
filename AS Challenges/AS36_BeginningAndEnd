@@ -1,0 +1,4 @@
+def start_end(user_list):
+    new_list = []
+    new_list.append(user_list[0])
+    new_list.append(user_list[-1])
