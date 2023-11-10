@@ -1,0 +1,24 @@
+import random
+
+while True:
+    if input("Do you want a Hex or Binary question? (H/B)") == "B":
+        num = ""
+        sum = 0
+        weights = [128, 64, 32, 16, 8, 4, 2, 1]
+        for i in range(8):
+            digi = random.choice([0, 1])
+            num += str(digi)
+            sum += digi * weights[i]
+
+        if input(f"What is the denary value of {num}?") == str(sum):
+            print("Correct!")
+        else:
+            print(f"Incorrect. It is {sum}")
+    else:
+        num = "0x"
+        for i in range(3):
+            num += str(random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']))
+        if input(f"What is the denary value of {num}?") == str(int(num, 16)):
+            print("Correct!")
+        else:
+            print(f"Incorrect. It is {int(num, 16)}")
