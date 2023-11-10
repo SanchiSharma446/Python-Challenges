@@ -1,0 +1,79 @@
+import string
+
+prefixes = "JKLMNOPQ"
+suffix = "ack"
+
+for letter in prefixes:
+    if letter in ["Q", "O"]:
+        print(letter + "u" + suffix)
+    print(letter + suffix)
+
+
+def count_str(string):
+    count = 0
+    for char in string:
+        if char == "a":
+            count += 1
+    return count
+
+
+def split_count(string):
+    out_str = ""
+    words =[]
+    for i in string:
+        if i in string.punctuation or i == " ":
+            words.append(out_str)
+            out_str = ""
+        else:
+            out_str += i
+    return len(words)
+
+
+def reverse(string):
+    if string == "":
+        return ""
+    else:
+        return reverse(string)
+
+
+def remove_letter(letter, string):
+    out_str = ""
+    for i in string:
+        if i != letter:
+            out_str += i
+    return out_str
+
+
+def is_pali(string):
+    if string == reverse(string):
+        return True
+    return False
+
+
+def count_substring(sub, string):
+    return string.count(sub)
+
+
+def remove(sub, string):
+    a = 0
+    count = 0
+    out_str = ""
+    for i in range(len(string)):
+        if sub[0] == string[i] and count == 0:
+            while sub[a] == string[i+a]:
+                i += 1
+        else:
+            out_str += string[i]
+    return out_str
+
+
+def remove_all(sub, string):
+    a = 0
+    out_str = ""
+    for i in range(len(string)):
+        if sub[0] == string[i]:
+            while sub[a] == string[i+a]:
+                i += 1
+        else:
+            out_str += string[i]
+    return out_str
