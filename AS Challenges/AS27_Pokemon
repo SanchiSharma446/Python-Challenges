@@ -1,0 +1,29 @@
+import numpy
+
+max_len = 0
+
+for i in range(300):
+    pokemon = []
+    with open("pokemon.txt", "r") as file:
+        for line in file:
+            pokemon.append(line.rstrip())
+
+    numpy.random.shuffle(pokemon)
+
+    ordered = []
+    letter = pokemon[0]
+    while True:
+        add = False
+        for i in range(1, len(pokemon)):
+            temp = pokemon[i]
+            if letter[-1] == temp[0]:
+                ordered.append(temp)
+                pokemon[i] = " "
+                letter = temp
+                add = True
+        if not add:
+            break
+    if len(ordered) > max_len:
+        max_len = len(ordered)
+
+print(max_len, ordered)
