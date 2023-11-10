@@ -1,0 +1,25 @@
+import random
+
+while True:
+    num = ""
+    for i in range(7):
+        num += random.choice(['0','1'])
+
+    if random.choice(['0','1']) == '0': #odd
+        if num.count('1')%2 == 0:
+            fin = '1'
+        else:
+            fin = '0'
+        if input(f"What is the parity bit for this odd parity byte? {num}") == fin:
+            print("Correct!")
+        else:
+            print(f"Incorect, it should be {fin}")
+    else:
+        if num.count('1')%2 == 0:
+            fin = '0'
+        else:
+            fin = '1'
+        if input(f"What is the parity bit for this even parity byte? {num}") == fin:
+            print("Correct!")
+        else:
+            print(f"Incoreect, it should be {fin}")
