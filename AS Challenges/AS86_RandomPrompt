@@ -1,0 +1,9 @@
+import random
+
+prompts = []
+
+with open("prompts.txt", "r") as file:
+    for line in file:
+        prompts.append(line.rstrip())
+
+print(random.choice(prompts))
