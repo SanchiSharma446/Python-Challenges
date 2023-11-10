@@ -1,0 +1,20 @@
+import re
+
+string = input("Input the string you would like to convert:")
+new_str = ""
+
+cons = re.split('a|e|i|o|u', string)
+
+j = 0
+for i in range(len(string)):
+    if string[i] in ["a", "e", "i", "o", "u"]:
+        if cons[j] == "":
+            new_str += string[i]
+        else:
+            new_str += cons[j] + 'o' + cons[j] + string[i]
+        j += 1
+    else:
+        if i == len(string)-1:
+            new_str += cons[-1] + 'o' + cons[-1]
+
+print(new_str)
