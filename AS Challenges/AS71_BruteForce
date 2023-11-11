@@ -26,4 +26,4 @@ def recursive_brute_force(password, max_len, current_attempt=''):
 
 
 password = password_gen(random.randint(1, 3)) #Large numbers take VERY long
-print(recursive_brute_force(password, 3)[0])  #Large numbers take VERY long
+print(f"Result: {recursive_brute_force(password, 3)[0]})  #Large numbers take VERY long
