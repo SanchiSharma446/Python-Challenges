@@ -1,0 +1,16 @@
+import string
+import random
+
+
+def sub_cipher(plaintext):
+    cipher_key = ""
+    ciphertext = ""
+
+    for i in range(26):
+        while (char := random.choice(string.ascii_uppercase)) in cipher_key:
+            char = random.choice(string.ascii_uppercase)
+        cipher_key += char
+
+    for i in plaintext.upper():
+        ciphertext += cipher_key[ord(i) - 65]
+    return ciphertext
