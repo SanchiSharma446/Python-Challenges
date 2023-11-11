@@ -1,0 +1,10 @@
+if type := input("What type of profit margin do you want to calculate?") == "GPM":
+    grossprofit = int(input("What is the Gross profit?"))
+    sales = int(input("What is the sales figure?"))
+    print(f"GPM is: {(grossprofit/sales)*100}")
+elif type == "NPM":
+    netprofit = int(input("What is the Net profit?"))
+    sales = int(input("What is the sales figure?"))
+    print(f"GPM is: {(netprofit / sales) * 100}")
+else:
+    print("Not valid profit margin type.")
